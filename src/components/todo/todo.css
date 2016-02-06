@@ -1,0 +1,51 @@
+@import "app/colors.css";
+
+todo {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding: 10px;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+todo-list {
+  display: block;
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+}
+
+.header {
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.newItemBox {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  border: none;
+  outline: none;
+  aappearance: none;
+
+  &::-webkit-input-placeholder {
+    color: $color-grey;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+}
+
+.main {
+  display: block;
+  font-size: 24px;
+}
+
+.footer {
+  font-size: 16px;
+}
+
+.footer, .main {
+  background: white;
+  padding: 10px;
+}

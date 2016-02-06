@@ -1,0 +1,3 @@
+<skyfii-todo-item ng-repeat="item in skyfiiTodoList.items track by item.title"
+  item="item" on-state-changed="skyfiiTodoList.itemStateChanged({item: item})">
+</skyfii-todo-item>

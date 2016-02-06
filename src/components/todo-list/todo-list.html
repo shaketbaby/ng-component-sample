@@ -1,0 +1,3 @@
+<todo-item ng-repeat="item in todoList.items track by item.title"
+  item="item" on-state-changed="todoList.itemStateChanged({item: item})">
+</todo-item>

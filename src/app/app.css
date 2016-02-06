@@ -1,0 +1,10 @@
+@import "normalize.css";
+@import "./colors.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-light-grey;
+}

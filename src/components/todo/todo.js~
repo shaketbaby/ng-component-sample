@@ -1,0 +1,36 @@
+import {Component, View} from "decorators";
+import styles from "./todo.css";
+import {template} from "./todo.html";
+import {todoList} from "components/todo-list"
+import {allTodos, addTodo} from "components/todo-store";
+
+@Component({
+  controllerAs: "model",
+  selector: "skyfii-todo"
+})
+@View({
+  styles: styles,
+  template: template,
+  directives: [todoList]
+})
+export class Todo {
+  constructor() {
+    this.newItem = "";
+    this.items = allTodos();
+    this.remaining = this.items.filter((item) => {
+      return !item.completed;
+    }).length;
+  }
+
+  onKeyPressed(event) {
+    if (event.keyCode === 13) {// ENTER
+      addTodo({title: this.newItem, completed: false});
+      this.newItem = "";
+      this.remaining++;
+    }
+  }
+
+  itemStateChanged(item) {
+    this.remaining += (item.completed ? -1 : 1);
+  }
+}

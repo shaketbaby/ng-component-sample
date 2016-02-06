@@ -1,0 +1,4 @@
+<label>
+  <input class="${styles.checkbox}" type="checkbox" ng-model="skyfiiTodoItem.item.completed" ng-change="skyfiiTodoItem.stateChanged()">
+  <span class="${styles.title}">{{skyfiiTodoItem.item.title}}</span>
+</label>

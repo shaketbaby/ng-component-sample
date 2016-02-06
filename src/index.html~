@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<title>SkyFii Front End Sample Application</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="/skyfii.css"> -->
+</head>
+<body>
+	<ui-view></ui-view>
+	<script src="/skyfii.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<header class="${styles.header}">
+  todos
+</header>
+
+<main class="${styles.main}">
+  <input ng-keypress="model.onKeyPressed($event)" ng-model="model.newItem"
+    class="${styles.newItemBox}" type="text" placeholder="what needs to be done?" autofocus>
+  <skyfii-todo-list items="model.items" on-item-state-changed="model.itemStateChanged(item)"></skyfii-todo-list>
+</main>
+
+<footer class="${styles.footer}">
+  <ng-pluralize count="model.remaining"
+    when="{
+      'one': '1 item left',
+      'other': '{} items left'
+    }">
+  </ng-pluralize>
+</footer>

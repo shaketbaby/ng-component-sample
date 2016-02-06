@@ -1,0 +1,15 @@
+@import "app/colors.css";
+
+todo-item {
+  display: block;
+  padding: 5px 0;
+}
+
+.title {
+  transition: color linear .25s;
+}
+
+.checkbox:checked + span {
+  color: $color-grey;
+  text-decoration: line-through;
+}
